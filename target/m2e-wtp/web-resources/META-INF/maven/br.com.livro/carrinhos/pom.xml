@@ -24,13 +24,21 @@
         <scope>provided</scope>
     </dependency>
 
-	<!-- MYSQL-->
+	<!-- MYSQL
 	<dependency>
 		<groupId>mysql</groupId>
 		<artifactId>mysql-connector-java</artifactId>
 		<version>5.1.35</version>
 		<scope>compile</scope>
+	</dependency>-->
+	
+		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+	<dependency>
+	    <groupId>com.mysql</groupId>
+	    <artifactId>mysql-connector-j</artifactId>
+	    <version>8.3.0</version>
 	</dependency>
+
 	
 	<!-- Jersey-->
 	<dependency>
@@ -73,6 +81,31 @@
 		<version>2.3.1</version>
 	</dependency>
 	
+	<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+	<!-- https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api -->
+	<dependency>
+	    <groupId>jakarta.xml.bind</groupId>
+	    <artifactId>jakarta.xml.bind-api</artifactId>
+	    <version>4.0.2</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime -->
+	<dependency>
+	    <groupId>org.glassfish.jaxb</groupId>
+	    <artifactId>jaxb-runtime</artifactId>
+	    <version>4.0.2</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-core -->
+	<dependency>
+	    <groupId>org.glassfish.jaxb</groupId>
+	    <artifactId>jaxb-core</artifactId>
+	    <version>4.0.2</version>
+	</dependency>
+
+
+
+
     
   </dependencies>
   <build>

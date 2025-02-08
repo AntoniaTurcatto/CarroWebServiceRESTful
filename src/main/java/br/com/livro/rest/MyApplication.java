@@ -33,8 +33,8 @@ public class MyApplication extends ResourceConfig {
 //	}
 
 	public MyApplication() {
-		// Ativa suporte a JSON
-        register(JacksonFeature.class);
+		// Ativa suporte a JSON (não é mais preciso, fizemos manualmente no GsonMessageBodyHandler)
+        //register(JacksonFeature.class);
         
         // Define o pacote para escanear classes com @Path, @GET, @POST etc.
         packages("br.com.livro");
