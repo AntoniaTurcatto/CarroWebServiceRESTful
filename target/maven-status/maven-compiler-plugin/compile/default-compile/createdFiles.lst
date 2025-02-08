@@ -1,0 +1,8 @@
+br\com\livro\domain\BaseDAO.class
+br\com\livro\rest\MyApplication.class
+br\com\livro\domain\Carro.class
+br\com\livro\domain\Response.class
+br\com\livro\domain\ListaCarros.class
+br\com\livro\domain\CarroDAO.class
+br\com\livro\domain\CarroService.class
+br\com\livro\rest\HelloResource.class
