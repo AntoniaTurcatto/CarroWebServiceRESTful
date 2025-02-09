@@ -12,6 +12,7 @@
 	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	    <spring.version>6.2.2</spring.version>
+	    <hibernate.version>6.6.6.Final</hibernate.version>
   </properties>
   
   <dependencies>
@@ -158,6 +159,49 @@
 	  <version>${spring.version}</version>
 	</dependency>
     
+    <!-- Hibernate-->
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <version>${hibernate.version}</version>
+	    <type>jar</type>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.hibernate.orm</groupId>
+	    <artifactId>hibernate-jcache</artifactId>
+	    <version>${hibernate.version}</version>
+	</dependency>
+	
+	
+	
+	<!--commons-dbcp for Hibernate-->
+	<dependency>
+	    <groupId>commons-dbcp</groupId>
+	    <artifactId>commons-dbcp</artifactId>
+	    <version>1.4</version>
+	</dependency>
+	
+	<!-- Hibernate AspectJ-->
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjrt</artifactId>
+	    <version>1.9.22.1</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjweaver</artifactId>
+	    <version>1.9.22.1</version>
+	</dependency>
+	<!-- 
+	<dependency>
+	    <groupId>org.hibernate.orm</groupId>
+	    <artifactId>hibernate-ehcache</artifactId>
+	    <version>6.0.0.Alpha7</version>
+	</dependency>-->
+
   </dependencies>
   <build>
     <finalName>Carrinhos</finalName>

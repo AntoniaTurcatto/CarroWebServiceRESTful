@@ -1,16 +1,48 @@
 package br.com.livro.domain;
 
-import java.io.Serializable;
+import java.io.Serializable;import org.hibernate.annotations.GeneratorType;
+import org.hibernate.annotations.ValueGenerationType;
+import org.hibernate.id.IdentifierGenerator;
+import org.springframework.stereotype.Component;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
+@Entity
 @XmlRootElement
 public class Carro implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@Column(name="id", unique=true, nullable=false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String tipo, nome, desc, urlFoto, urlVideo, latitude, longitude;
+	
+	@Column(nullable = false, length = 50)
+	private String tipo;
+	
+	@Column(nullable = false, length = 100)
+	private String nome;
+	
+	@Column(name = "descricao", nullable = true, length = 500)
+	private String desc; 
+	
+	@Column(name="url_foto", nullable = true, length = 50)
+	private String urlFoto;
+	
+	@Column(name="url_video", nullable = true, length = 50)
+	private String urlVideo;
+	
+	@Column(nullable = true, length = 15)
+	private String latitude;
+	
+	@Column(nullable = true, length = 50)
+	private String longitude;
 	
 	public Carro() {} 
 	
