@@ -2,12 +2,16 @@ package br.com.livro.domain;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class CarroService {
+	
+	@Autowired
 	private CarroDAO db;
 
-	public CarroService() {
-		db = new CarroDAO();
-	}
+	public CarroService() {}
 	
 	public List<Carro> getCarros(){
 		return db.getCarros();

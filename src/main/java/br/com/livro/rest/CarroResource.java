@@ -2,6 +2,9 @@ package br.com.livro.rest;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import br.com.livro.domain.Carro;
 import br.com.livro.domain.CarroService;
 import br.com.livro.domain.Response;
@@ -18,9 +21,11 @@ import jakarta.ws.rs.core.MediaType;
 @Path("/carros")
 @Consumes(MediaType.APPLICATION_JSON+";charset=utf-8")
 @Produces(MediaType.APPLICATION_JSON+";charset=utf-8")
+@Component
 public class CarroResource {
 
-	private CarroService carroService = new CarroService();
+	@Autowired
+	private CarroService carroService;
 	
 	@GET
 	public List<Carro> get(){

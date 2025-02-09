@@ -21,13 +21,22 @@
     	<artifactId>mylib</artifactId>
     	<version>0.0.3-SNAPSHOT</version>
     </dependency>
-   -->
+   
    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
-    </dependency>
+    </dependency>-->
+    
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+	<dependency>
+	    <groupId>org.junit.jupiter</groupId>
+	    <artifactId>junit-jupiter-api</artifactId>
+	    <version>5.11.4</version>
+	    <scope>test</scope>
+	</dependency>
+
     
     <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
 	 <!-- Servlet API (provided by Tomcat) -->
