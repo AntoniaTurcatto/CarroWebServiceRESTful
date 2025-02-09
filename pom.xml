@@ -7,8 +7,22 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>carrinhos Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+  <properties>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	    <spring.version>6.2.2</spring.version>
+  </properties>
+  
   <dependencies>
+  <!-- 
     <dependency>
+    	<groupId>br.com.livro</groupId>
+    	<artifactId>mylib</artifactId>
+    	<version>0.0.3-SNAPSHOT</version>
+    </dependency>
+   -->
+   <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
@@ -46,6 +60,8 @@
 	    <artifactId>jersey-container-servlet</artifactId>
 	    <version>3.1.4</version>
 	</dependency>
+	
+	
 	
 	<dependency>
 	    <groupId>org.glassfish.jersey.inject</groupId>
@@ -103,12 +119,50 @@
 	    <version>4.0.2</version>
 	</dependency>
 
+	<!-- Jersey-Spring6-->
+	<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.ext/jersey-spring6 -->
+	<dependency>
+	    <groupId>org.glassfish.jersey.ext</groupId>
+	    <artifactId>jersey-spring6</artifactId>
+	    <version>4.0.0-M2</version>
+	</dependency>
 
 
 
+	<!-- Spring-->
+	<!-- https://mvnrepository.com/artifact/org.springframework/org.springframework.web -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-web</artifactId>
+	    <version>${spring.version}</version>
+	</dependency>
+
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-orm</artifactId>
+	    <version>${spring.version}</version>
+	</dependency>
     
   </dependencies>
   <build>
     <finalName>Carrinhos</finalName>
+    <plugins>
+    	<!-- Maven Compiler-->
+    	<plugin>
+    		<groupId>org.apache.maven.plugins</groupId>
+    		<artifactId>maven-compiler-plugin</artifactId>
+    		<version>3.13.0</version>
+    		<configuration>
+    			<source>21</source>
+    			<target>21</target>
+    		</configuration>
+    	</plugin>
+    	<!-- para usar mvn site-->
+    	<plugin>
+			 <groupId>org.apache.maven.plugins</groupId>
+			 <artifactId>maven-site-plugin</artifactId>
+			 <version>3.21.0</version>
+		</plugin>
+    </plugins>
   </build>
 </project>
