@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.Set;
 
 import org.glassfish.jersey.jackson.JacksonFeature;
+import org.glassfish.jersey.media.multipart.MultiPart;
+import org.glassfish.jersey.media.multipart.MultiPartFeature;
 //import org.glassfish.jersey.jettison.JettisonFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 
@@ -35,7 +37,7 @@ public class MyApplication extends ResourceConfig {
 	public MyApplication() {
 		// Ativa suporte a JSON (não é mais preciso, fizemos manualmente no GsonMessageBodyHandler)
         //register(JacksonFeature.class);
-        
+        register(MultiPartFeature.class);
         // Define o pacote para escanear classes com @Path, @GET, @POST etc.
         packages("br.com.livro");
 	}
